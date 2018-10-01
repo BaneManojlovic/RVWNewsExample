@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RVW News Example</string>
+    <string name="open_news">Open News</string>
+    <string name="home_fragment">Home Fragment</string>
+</resources>
