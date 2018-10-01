@@ -1,39 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/newsItem"
+        android:id="@+id/newsItemLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/colorGrey"
         android:elevation="16dp">
 
         <LinearLayout
+            android:id="@+id/linearLayoutItem"
             android:layout_width="match_parent"
-            android:layout_height="88dp"
-            android:elevation="16dp">
+            android:layout_height="100dp"
+            android:layout_margin="4dp">
 
             <ImageView
+                android:id="@+id/articleImage"
                 android:layout_width="100dp"
-                android:layout_height="56dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/darker_gray"
-                android:src="@mipmap/ic_launcher"/>
+                android:layout_height="100dp"
+                android:background="@color/colorGrey"
+                android:src="@mipmap/ic_launcher" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Naslov"/>
+            <LinearLayout
+                android:layout_width="236dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Opis sadrzaja"/>
+                <TextView
+                    android:id="@+id/articleTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:text="Naslov"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/articleDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:layout_marginStart="10dp"
+                    android:gravity="bottom"
+                    android:textSize="14sp"
+                    android:text="Opis sadrzaja" />
+            </LinearLayout>
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
